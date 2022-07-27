@@ -28,9 +28,8 @@ class RestaurantServiceTest {
 
         RestaurantService rs= new RestaurantService();
         Restaurant R= rs.addRestaurant ("Sukhsagar","Kolkata",LocalTime.parse("10:00:00"),LocalTime.parse("22:00:00"));
-        Restaurant rt=rs.findRestaurantByName("SukhrIndia");
         //assertEquals(R, rt);
-        assertNotEquals(R, rt);
+        assertThrows(restaurantNotFoundException.class,()->service.findRestaurantByName("Pantry d'or"));
 
        // throw new IOException("sorry device error");
         //throw new restaurantNotFoundException("error");
