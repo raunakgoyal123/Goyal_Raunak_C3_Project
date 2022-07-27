@@ -23,8 +23,8 @@ class RestaurantTest {
     public void is_restaurant_open_should_return_false_if_time_is_outside_opening_and_closing_time(){
         //WRITE UNIT TEST CASE HERE
         RestaurantService rs= new RestaurantService();
-        Restaurant R= rs.addRestaurant ("Sukhsagar","Kolkata",LocalTime.parse("20:00:00"),LocalTime.parse("22:00:00"));
-        boolean l= R.isRestaurantOpen();
+        Restaurant Ru= rs.addRestaurant ("Sukhsagar","Kolkata",LocalTime.parse("20:00:00"),LocalTime.parse("22:00:00"));
+        boolean l= Ru.isRestaurantOpen();
         assertEquals(false, l);
 
     }
