@@ -13,12 +13,19 @@ class RestaurantTest {
     //-------FOR THE 2 TESTS BELOW, YOU MAY USE THE CONCEPT OF MOCKING, IF YOU RUN INTO ANY TROUBLE
     @Test
     public void is_restaurant_open_should_return_true_if_time_is_between_opening_and_closing_time(){
-        //WRITE UNIT TEST CASE HERE
+        RestaurantService rs= new RestaurantService();
+        Restaurant R= rs.addRestaurant ("Sukhsagar","Kolkata",LocalTime.parse("10:00:00"),LocalTime.parse("22:00:00"));
+        boolean l= R.isRestaurantOpen();
+        assertEquals(true, l);
     }
 
     @Test
     public void is_restaurant_open_should_return_false_if_time_is_outside_opening_and_closing_time(){
         //WRITE UNIT TEST CASE HERE
+        RestaurantService rs= new RestaurantService();
+        Restaurant R= rs.addRestaurant ("Sukhsagar","Kolkata",LocalTime.parse("20:00:00"),LocalTime.parse("22:00:00"));
+        boolean l= R.isRestaurantOpen();
+        assertEquals(false, l);
 
     }
 
