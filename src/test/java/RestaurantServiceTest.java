@@ -81,12 +81,6 @@ class RestaurantServiceTest {
 
 
 
-    @Test
-    public void calculate_total_ordervalue_from_list_of_items(){
-        int amount=service.calculateorderamount("Sandwich","Cake");
-        assertEquals(30,amount);
 
-
-    }
     //<<<<<<<<<<<<<<<<<<<<ADMIN: ADDING & REMOVING RESTAURANTS>>>>>>>>>>>>>>>>>>>>>>>>>>
 }

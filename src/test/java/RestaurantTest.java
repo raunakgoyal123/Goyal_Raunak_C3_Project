@@ -2,7 +2,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalTime;
-
+import java.util.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class RestaurantTest {
@@ -67,6 +67,22 @@ class RestaurantTest {
 
         assertThrows(itemNotFoundException.class,
                 ()->restaurant.removeFromMenu("French fries"));
+    }
+    @Test
+    public void calculateorderamount(){
+        LocalTime openingTime = LocalTime.parse("10:30:00");
+        LocalTime closingTime = LocalTime.parse("22:00:00");
+        restaurant =new Restaurant("Amelie's cafe","Chennai",openingTime,closingTime);
+        restaurant.addToMenu("Sandwich",10);
+        restaurant.addToMenu("Cake",20);
+        List<String> items= new ArrayList<>();
+        items.add("Sandwich");
+        items.add("Cake");
+       int amount=restaurant.calculateorderamount(items);
+       assertEquals(30,amount);
+
+
+
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }
