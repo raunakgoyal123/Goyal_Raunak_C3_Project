@@ -63,14 +63,14 @@ public class Restaurant {
                 +"Menu:"+"\n"+getMenu());
 
     }
-   // public int calculateorderamount(List<String> items){
-       // int amount=0;
-        //for( String s : items){
-            //Item i= findItemByName(s);
-            //amount= amount+i.getPrice();
-        //}
-        //return amount;
-    //}
+   public int calculateorderamount(List<String> items){
+        int amount=0;
+        for( String s : items){
+            Item i= findItemByName(s);
+            amount= amount+i.getPrice();
+        }
+        return amount;
+    }
     public String getName() {
         return name;
     }
