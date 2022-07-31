@@ -26,11 +26,11 @@ public class RestaurantService {
         restaurants.remove(restaurantToBeRemoved);
         return restaurantToBeRemoved;
     }
-    //public int calculateorderamount(String  itemname1, String itemname2){
-      // Item i1=new Item("Sandwich",10);
-      // Item i2=new Item("Cake",20);
-        //return i1.getPrice()+i2.getPrice();
-    //}
+    public int calculateorderamount(String  itemname1, String itemname2){
+       Item i1=new Item("Sandwich",10);
+       Item i2=new Item("Cake",20);
+       return i1.getPrice()+i2.getPrice();
+    }
     public List<Restaurant> getRestaurants() {
         return restaurants;
     }
